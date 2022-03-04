@@ -70,6 +70,7 @@ const config = {
       }),
     ],
   ],
+  
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -205,8 +206,8 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 6
       },
+      hideableSidebar: true, // 可以折叠隐藏的侧边栏
       zoomSelector: '.markdown img',
-
     }),
 };
 
