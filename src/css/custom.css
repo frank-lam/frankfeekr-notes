@@ -1,0 +1,113 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+/* :root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+} */
+
+
+
+/* :root {
+  --ifm-color-primary: #4183c4;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+} */
+
+.hero--primary {
+  --ifm-hero-background-color: #404448;
+  --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #404448;
+  --ifm-footer-color: var(--ifm-footer-link-color);
+  --ifm-footer-link-color: var(--ifm-color-secondary);
+  --ifm-footer-title-color: var(--ifm-color-white);
+}
+
+
+/* Github 蓝色1 */
+:root {
+  --ifm-color-primary: #0969da;
+  --ifm-color-primary-dark: #085ec4;
+  --ifm-color-primary-darker: #0859b9;
+  --ifm-color-primary-darkest: #064999;
+  --ifm-color-primary-light: #0a73f0;
+  --ifm-color-primary-lighter: #1079f5;
+  --ifm-color-primary-lightest: #318cf6;
+}
+
+/* GitHub 蓝色2 */
+/* :root {
+  --ifm-color-primary: #0088ff;
+  --ifm-color-primary-dark: #007ae6;
+  --ifm-color-primary-darker: #0074d9;
+  --ifm-color-primary-darkest: #005fb3;
+  --ifm-color-primary-light: #1a94ff;
+  --ifm-color-primary-lighter: #269aff;
+  --ifm-color-primary-lightest: #4dacff;
+} */
+
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+/* 自定义样式 == 开始 */
+
+
+header>h1 {
+  font-size: 2.5rem !important;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.markdown li > p {
+  margin-top: 1px  !important;
+  margin-bottom: 1px  !important;
+
+}
+
+/* 左上角 LOGO 的大小 */
+.navbar__logo {
+  height: 1.38rem;
+}
+/* .navbar__logo {
+  height: 1.25rem;
+} */

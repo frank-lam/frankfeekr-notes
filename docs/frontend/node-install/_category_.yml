@@ -1,0 +1,7 @@
+position: 3 # float position is supported
+label: 'Node 环境安装'
+collapsible: true # make the category collapsible
+collapsed: false # keep the category open by default. 展开目录: false, 不展开: true
+link:
+  type: generated-index
+  title: Tutorial overview
