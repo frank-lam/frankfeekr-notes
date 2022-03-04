@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '技术小匠·笔记',
-  tagline: '积跬步以至千里，致敬每个爱学习的你。!',
+  tagline: '积跬步以至千里，致敬每个爱学习的你！',
   url: 'https://notes.frankfeekr.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
