@@ -143,6 +143,11 @@ const config = {
           // },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
+            href: 'https://github.com/frank-lam/frankfeekr-notes/actions',
+            label: 'Actions',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/frank-lam/fullstack-tutorial',
             label: 'GitHub',
             position: 'right',
