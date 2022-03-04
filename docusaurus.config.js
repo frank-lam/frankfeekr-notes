@@ -14,7 +14,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/Landscape.svg',
   organizationName: 'frank-lam', // Usually your GitHub org/user name.
-  projectName: 'fs-notes', // Usually your repo name.
+  projectName: 'frankfeekr-notes', // Usually your repo name.
 
   // themes: [
   //   // ... Your other themes.
