@@ -124,10 +124,10 @@ const config = {
               //   label: "ECMAScript2015~2020语法全解析",
               //   to: "/docs/frontend/es6",
               // },
-              {
-                label: "JavaSciprt",
-                to: "/docs/FE/javaSciprt",
-              },
+              // {
+              //   label: "JavaSciprt",
+              //   to: "/docs/FE/javaSciprt",
+              // },
               {
                 type: 'docSidebar',
                 sidebarId: 'frontend',
