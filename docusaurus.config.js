@@ -79,6 +79,7 @@ const config = {
       // autoCollapseSidebarCategories: true,
       navbar: {
         title: '技术小匠·笔记',
+        hideOnScroll: true,
         logo: {
           alt: 'My Site Logo',
           src: 'img/idea.svg',
@@ -102,11 +103,37 @@ const config = {
             sidebarId: 'backend',
             label: '后台架构',
           },
+          // {
+          //   type: 'docSidebar',
+          //   position: 'left',
+          //   sidebarId: 'frontend',
+          //   label: '前端技术',
+          // },
           {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'frontend',
-            label: '前端技术',
+            activeBasePath: "docs", // 路径
+            label: "前端技术",
+            position: "left",
+            items: [
+
+              {
+                type: 'docSidebar',
+                sidebarId: 'frontend_es6',
+                label: 'ECMAScript2015~2020语法全解析',
+              },
+              // {
+              //   label: "ECMAScript2015~2020语法全解析",
+              //   to: "/docs/frontend/es6",
+              // },
+              {
+                label: "JavaSciprt",
+                to: "/docs/FE/javaSciprt",
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'frontend',
+                label: '总览',
+              },
+            ],
           },
           {
             type: 'docSidebar',
