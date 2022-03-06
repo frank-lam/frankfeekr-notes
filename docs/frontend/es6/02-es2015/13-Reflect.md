@@ -2,7 +2,7 @@
 
 Reflect对象与Proxy对象一样，也是 ES6 为了操作对象而提供的新 API。
 
-## [#](http://es.xiecheng.live/es6/reflect.html#设计目的)设计目的
+## 设计目的
 
 - 将Object属于语言内部的方法放到Reflect上
 
@@ -72,9 +72,9 @@ TIP
 
 与大多数全局对象不同，Reflect没有构造函数。你不能将其与一个new运算符一起使用，或者将Reflect对象作为一个函数来调用。Reflect的所有属性和方法都是静态的（就像Math对象）
 
-## [#](http://es.xiecheng.live/es6/reflect.html#常用方法)常用方法
+## 常用方法
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-apply)Reflect.apply()
+### 
 
 **语法**
 
@@ -112,7 +112,7 @@ Reflect.apply(''.charAt, 'ponies', [3])
 Function.prototype.apply.call(Math.floor, undefined, [1.75])
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-construct)Reflect.construct()
+### 
 
 Reflect.construct() 方法的行为有点像 new 操作符 构造函数 ， 相当于运行 new target(...args).
 
@@ -155,7 +155,7 @@ Reflect.getPrototypeOf(result) // 输出：someConstructor.prototype
 Array.isArray(result) // true
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-defineproperty)Reflect.defineProperty()
+### 
 
 静态方法 Reflect.defineProperty() 基本等同于 Object.defineProperty() 方法，唯一不同是返回 Boolean 值。
 
@@ -181,7 +181,7 @@ Reflect.defineProperty(student, 'name', {
 student.name // "Mike"
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-deleteproperty)Reflect.deleteProperty()
+### 
 
 Reflect.deleteProperty 允许你删除一个对象上的属性。返回一个 Boolean 值表示该属性是否被成功删除。它几乎与非严格的 delete operator 相同。
 
@@ -219,7 +219,7 @@ Reflect.deleteProperty(Object.freeze({
 }), "foo") // false
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-get)Reflect.get()
+### 
 
 Reflect.get() 方法的工作方式，就像从 object (target[propertyKey]) 中获取属性，但它是作为一个函数执行的。
 
@@ -260,7 +260,7 @@ var obj = new Proxy(x, {
 Reflect.get(obj, 'foo') // "foobar"
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-getownpropertydescriptor)Reflect.getOwnPropertyDescriptor()
+### 
 
 静态方法 Reflect.getOwnPropertyDescriptor() 与 Object.getOwnPropertyDescriptor() 方法相似。如果在对象中存在，则返回给定的属性的属性描述符，否则返回 undefined。
 
@@ -304,7 +304,7 @@ Object.getOwnPropertyDescriptor("foo", 0)
 // { value: "f", writable: false, enumerable: true, configurable: false }
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-getprototypeof)Reflect.getPrototypeOf()
+### 
 
 静态方法 Reflect.getPrototypeOf() 与 Object.getPrototypeOf() 方法是一样的。都是返回指定对象的原型（即，内部的 [[Prototype]] 属性的值）。
 
@@ -318,7 +318,7 @@ Object.getOwnPropertyDescriptor("foo", 0)
 | :----: | :----------------: | :--: |
 | target | 获取原型的目标对象 |  Y   |
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-has)Reflect.has()
+### 
 
 Reflect.has 用于检查一个对象是否拥有某个属性， 相当于in 操作符
 
@@ -333,7 +333,7 @@ Reflect.has 用于检查一个对象是否拥有某个属性， 相当于in 操�
 |   target    |           获取原型的目标对象           |  Y   |
 | propertyKey | 属性名，需要检查目标对象是否存在此属性 |  Y   |
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-isextensible)Reflect.isExtensible()
+### 
 
 Reflect.isExtensible 判断一个对象是否可扩展 （即是否能够添加新的属性），它与 Object.isExtensible() 方法一样。
 
@@ -347,7 +347,7 @@ Reflect.isExtensible 判断一个对象是否可扩展 （即是否能够添加�
 | :----: | :----------------: | :--: |
 | target | 获取原型的目标对象 |  Y   |
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-ownkeys)Reflect.ownKeys()
+### 
 
 Reflect.ownKeys 方法返回一个由目标对象自身的属性键组成的数组。它的返回值等同于 Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target))
 
@@ -390,7 +390,7 @@ Reflect.ownKeys(obj)
 // symbols in insertion order
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-preventextensions)Reflect.preventExtensions()
+### 
 
 Reflect.preventExtensions 方法阻止新属性添加到对象 例如：防止将来对对象的扩展被添加到对象中)。该方法与 Object.preventExtensions() 方法一致
 
@@ -421,7 +421,7 @@ Object.preventExtensions(1)
 // 1
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-set)Reflect.set()
+### 
 
 Reflect.set 方法允许你在对象上设置属性。它的作用是给属性赋值并且就像 property accessor 语法一样，但是它是以函数的方式。
 
@@ -462,7 +462,7 @@ Reflect.getOwnPropertyDescriptor(obj, "undefined")
 // { value: undefined, writable: true, enumerable: true, configurable: true }
 ```
 
-### [#](http://es.xiecheng.live/es6/reflect.html#reflect-setprototypeof)Reflect.setPrototypeOf()
+### 
 
 Reflect.setPrototypeOf 方法改变指定对象的原型 （即，内部的 [[Prototype]] 属性值）
 
@@ -498,7 +498,7 @@ Reflect.setPrototypeOf(target, proto) // false
 
 对于以上所有 API 第一个参数是 Object 的，如果给定的不是 Object 则抛出一个 TypeError 异常
 
-### [#](http://es.xiecheng.live/es6/reflect.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [ES6 Reflection in Depth](https://ponyfoo.com/articles/es6-reflection-in-depth)
 - [Reflect Usage](https://www.stefanjudis.com/today-i-learned/the-global-reflect-object-its-use-cases-and-things-to-watch-out-for/)

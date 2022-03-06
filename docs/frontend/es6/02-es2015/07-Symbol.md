@@ -4,7 +4,7 @@ ES6 引入了一种新的原始数据类型 `Symbol` ，表示独一无二的值
 
 Symbol 值通过Symbol函数生成。这就是说，对象的属性名现在可以有两种类型，一种是原来就有的字符串，另一种就是新增的 Symbol 类型。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。
 
-## [#](http://es.xiecheng.live/es6/symbol.html#声明方式)声明方式
+## 声明方式
 
 ```js
 let s = Symbol()
@@ -39,7 +39,7 @@ console.log(s2)
 console.log(s1 === s2) // false
 ```
 
-## [#](http://es.xiecheng.live/es6/symbol.html#symbol-for)Symbol.for()
+## 
 
 `Symbol.for()` 接受一个字符串作为参数，然后搜索有没有以该参数作为名称的 Symbol 值。如果有，就返回这个 Symbol 值，否则就新建一个以该字符串为名称的 Symbol 值，并将其注册到全局。
 
@@ -53,7 +53,7 @@ console.log(s1 === s2) // true
 
 Symbol.for()与Symbol()这两种写法，都会生成新的 Symbol。它们的区别是，前者会被登记在全局环境中供搜索，后者不会。Symbol.for()不会每次调用就返回一个新的 Symbol 类型的值，而是会先检查给定的key是否已经存在，如果不存在才会新建一个值。
 
-## [#](http://es.xiecheng.live/es6/symbol.html#symbol-keyfor)Symbol.keyFor()
+## 
 
 Symbol.keyFor()方法返回一个已登记的 Symbol 类型值的key。
 
@@ -65,7 +65,7 @@ const s2 = Symbol.for('foo')
 console.log(Symbol.keyFor(s2)) // foo
 ```
 
-## [#](http://es.xiecheng.live/es6/symbol.html#作为属性名)作为属性名
+## 作为属性名
 
 由于每一个 Symbol 值都是不相等的，这意味着 Symbol 值可以作为标识符，用于对象的属性名，就能保证不会出现同名的属性。这对于一个对象由多个模块构成的情况非常有用，能防止某一个键被不小心改写或覆盖。
 
@@ -110,7 +110,7 @@ console.log(grade[stu1])
 console.log(grade[stu2])
 ```
 
-## [#](http://es.xiecheng.live/es6/symbol.html#属性遍历)属性遍历
+## 属性遍历
 
 ```js
 const sym = Symbol('imooc')
@@ -143,7 +143,7 @@ for (let key of Reflect.ownKeys(user)) {
 }
 ```
 
-## [#](http://es.xiecheng.live/es6/symbol.html#消除魔术字符串)消除魔术字符串
+## 消除魔术字符串
 
 魔术字符串指的是，在代码之中多次出现、与代码形成强耦合的某一个具体的字符串或者数值。风格良好的代码，应该尽量消除魔术字符串，改由含义清晰的变量代替。
 
@@ -188,6 +188,6 @@ function getArea(shape) {
 console.log(getArea(shapeType.triangle))
 ```
 
-### [#](http://es.xiecheng.live/es6/symbol.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [Symbol](https://developer.mozilla.org/zh-CN/docs/Glossary/Symbol)

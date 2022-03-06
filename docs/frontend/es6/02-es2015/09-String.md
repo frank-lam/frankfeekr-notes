@@ -1,6 +1,6 @@
 # String扩展
 
-## [#](http://es.xiecheng.live/es6/string.html#unicode表示法)Unicode表示法
+## Unicode表示法
 
 ES6 加强了对 Unicode 的支持，允许采用\uxxxx形式表示一个字符，其中xxxx表示字符的 Unicode 码点。
 
@@ -38,7 +38,7 @@ ES6 对这一点做出了改进，只要将码点放入大括号，就能正确�
 '\u{7A}' === 'z' // true
 ```
 
-## [#](http://es.xiecheng.live/es6/string.html#遍历器接口)遍历器接口
+## 遍历器接口
 
 ES6 为字符串添加了遍历器接口，详见Iterator一节，使得字符串可以被for...of循环遍历。
 
@@ -48,7 +48,7 @@ for (let item of 'imooc') {
 }
 ```
 
-## [#](http://es.xiecheng.live/es6/string.html#模板字符串)模板字符串
+## 模板字符串
 
 在 ES6 之前对字符串的处理是相当的麻烦，看如下场景：
 
@@ -90,7 +90,7 @@ for (let item of 'imooc') {
 
 看到这样的代码一定会感到很熟悉，通常大家的做法是使用上述的字符串拼接+逻辑判断，或者采用字符串模板类库来操作。
 
-### [#](http://es.xiecheng.live/es6/string.html#string-literals)String Literals
+### String Literals
 
 看了上述的应用场景，就要引入 String Literals 话题，这个是用来解决字符串拼接问题，从 ES6 开始可以这样定义字符串了。
 
@@ -129,7 +129,7 @@ string text line 2`)
 
 完全不需要 ```\n` ``来参与。
 
-### [#](http://es.xiecheng.live/es6/string.html#tag-literals)Tag Literals
+### Tag Literals
 
 前面的字符串字面量解决了字符串拼接的问题，对于包含复杂逻辑的字符串并不是简单的表达式能搞定的。所以需要另一种解决方案：Tag Literals，还是看上述那个例子:
 
@@ -172,9 +172,9 @@ TIP
 
 strings 参数指的是 Tag 函数后面被变量分割开的字符串集合，type 参数是对应第一个变量，Tag 函数可以有多个 type 类似的参数
 
-## [#](http://es.xiecheng.live/es6/string.html#扩展方法)扩展方法
+## 扩展方法
 
-### [#](http://es.xiecheng.live/es6/string.html#string-prototype-fromcodepoint)String.prototype.fromCodePoint()
+### 
 
 用于从 Unicode 码点返回对应字符，并且可以识别大于0xFFFF的字符。
 
@@ -186,7 +186,7 @@ console.log(String.fromCharCode(0x20BB7))
 console.log(String.fromCodePoint(0x20BB7))
 ```
 
-### [#](http://es.xiecheng.live/es6/string.html#string-prototype-includes)String.prototype.includes()
+### 
 
 ES5中可以使用indexOf方法来判断一个字符串是否包含在另一个字符串中，indexOf返回出现的下标位置，如果不存在则返回-1。
 
@@ -204,7 +204,7 @@ const str = 'imooc'
 console.log(str.includes('mo'))
 ```
 
-### [#](http://es.xiecheng.live/es6/string.html#string-prototype-startswith)String.prototype.startsWith()
+### 
 
 判断参数字符串是否在原字符串的头部, 返回boolean类型的值。
 
@@ -214,7 +214,7 @@ const str = 'imooc'
 console.log(str.startsWith('im'))
 ```
 
-### [#](http://es.xiecheng.live/es6/string.html#string-prototype-endswith)String.prototype.endsWith()
+### 
 
 判断参数字符串是否在原字符串的尾部, 返回boolean类型的值。
 
@@ -224,7 +224,7 @@ const str = 'imooc'
 console.log(str.endsWith('mooc'))
 ```
 
-### [#](http://es.xiecheng.live/es6/string.html#string-prototype-repeat)String.prototype.repeat()
+### 
 
 repeat方法返回一个新字符串，表示将原字符串重复n次。
 
@@ -236,7 +236,7 @@ const newStr = str.repeat(10)
 console.log(newStr)
 ```
 
-### [#](http://es.xiecheng.live/es6/string.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [模板字符串](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/template_strings)
 - [A guide to JavaScript Template Literals](https://flaviocopes.com/javascript-template-literals/)

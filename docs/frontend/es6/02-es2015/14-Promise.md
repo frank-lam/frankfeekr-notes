@@ -1,8 +1,8 @@
 # Promise
 
-## [#](http://es.xiecheng.live/es6/promise.html#异步操作前置知识)异步操作前置知识
+## 异步操作前置知识
 
-### [#](http://es.xiecheng.live/es6/promise.html#js是单线程的)JS是单线程的
+### JS是单线程的
 
 就是同一个时间只能处理一个任务。就类似生活中的去超市排队结账，正常情况下，一位收银员只能为一位顾客结账，其他顾客需要在后面排队等候。
 
@@ -39,7 +39,7 @@ console.log(3)
 
 下图说明了同步任务和异步任务的执行过程： ![img](http://es.xiecheng.live/assets/img/task.9fef93a6.png)
 
-### [#](http://es.xiecheng.live/es6/promise.html#ajax原理)Ajax原理
+### Ajax原理
 
 Ajax 即“Asynchronous Javascript And XML”（异步 JavaScript 和 XML），是指一种创建交互式、快速动态网页应用的网页开发技术，无需重新加载整个网页的情况下，能够更新部分网页的技术。通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
 
@@ -67,7 +67,7 @@ xmlhttp.onreadystatechange = function() {
 }
 ```
 
-### [#](http://es.xiecheng.live/es6/promise.html#callback-hell)Callback Hell
+### Callback Hell
 
 JavaScipt 中的许多操作都是异步的，我们把上面的Ajax封装成一个函数：
 
@@ -152,7 +152,7 @@ ajax('static/a.json', res => {
 
 这就被称为 “回调地狱” 或者“回调深渊”。
 
-## [#](http://es.xiecheng.live/es6/promise.html#基本语法)基本语法
+## 基本语法
 
 Promise 就是为了解决“回调地狱”问题的，它可以将异步操作的处理变得很优雅。回调地狱，代码难以维护， 常常第一个的函数的输出是第二个函数的输入这种现象promise可以支持多个并发的请求，获取并发请求中的数据这个promise可以解决异步的问题，本身不能说promise是异步的。
 
@@ -197,7 +197,7 @@ TIP
 
 状态转化是单向的，不可逆转，已经确定的状态（fulfilled/rejected）无法转回初始状态（pending），而且只能是从 pending 到 fulfilled 或者 rejected
 
-## [#](http://es.xiecheng.live/es6/promise.html#promise-prototype-then)Promise.prototype.then()
+## 
 
 **基本语法**
 
@@ -223,7 +223,7 @@ promise.then(function(value) {
 - 当 handler 返回一个正常值的时候，这个值会传递给 Promise 对象的 onFulfilled 方法。
 - 定义的 handler 中产生异常的时候，这个值则会传递给 Promise 对象的 onRejected 方法。
 
-## [#](http://es.xiecheng.live/es6/promise.html#promise-prototype-catch)Promise.prototype.catch()
+## 
 
 捕获异常是程序质量保障最基本的要求，可以使用 Promise 对象的 catch 方法来捕获异步操作过程中出现的任何异常。
 
@@ -269,7 +269,7 @@ test().catch((e) => {
 
 不建议在 Promise 内部使用 throw 来触发异常，而是使用 `reject(new Error())` 的方式来做，因为 throw 的方式并没有改变 Pronise 的状态
 
-## [#](http://es.xiecheng.live/es6/promise.html#promise-resolve)Promise.resolve()
+## 
 
 一般情况下我们都会使用 ```new Promise()` ``来创建 Promise 对象，但是除此之外我们也可以使用其他方法。
 
@@ -297,7 +297,7 @@ Promise.resolve(42).then(function(value) {
 
 Promise.resolve 作为 new Promise() 的快捷方式，在进行 Promise 对象的初始化或者编写测试代码的时候都非常方便。
 
-## [#](http://es.xiecheng.live/es6/promise.html#promise-reject)Promise.reject()
+## 
 
 Promise.reject(error) 是和 Promise.resolve(value) 类似的静态方法，是 new Promise() 方法的快捷方式。
 
@@ -315,7 +315,7 @@ new Promise(function(resolve, reject) {
 Promise.reject(new Error('BOOM!'))
 ```
 
-## [#](http://es.xiecheng.live/es6/promise.html#promise-all)Promise.all()
+## 
 
 **基本语法**
 
@@ -338,7 +338,7 @@ Promise.all 生成并返回一个新的 Promise 对象，所以它可以使用 P
 
 由于参数数组中的每个元素都是由 Promise.resolve 包装（wrap）的，所以Promise.all 可以处理不同类型的 Promise 对象。
 
-## [#](http://es.xiecheng.live/es6/promise.html#promise-race)Promise.race()
+## 
 
 **基本语法**
 
@@ -359,7 +359,7 @@ Promise.race 生成并返回一个新的 Promise 对象。
 
 参数 promise 数组中的任何一个 Promise 对象如果变为 resolve 或者 reject 的话， 该函数就会返回，并使用这个 Promise 对象的值进行 resolve 或者 reject。
 
-## [#](http://es.xiecheng.live/es6/promise.html#练习)练习
+## 练习
 
 如何把前面Callback Hell的代码改写成promise的写法呢？
 
@@ -388,7 +388,7 @@ getPromise('static/a.json')
     })
 ```
 
-### [#](http://es.xiecheng.live/es6/promise.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [fetch](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)

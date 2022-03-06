@@ -4,9 +4,9 @@
 
 ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都是唯一的，没有重复的值。
 
-## [#](http://es.xiecheng.live/es6/set.html#基本语法)基本语法
+## 基本语法
 
-### [#](http://es.xiecheng.live/es6/set.html#生成-set-实例)生成 Set 实例
+### 生成 Set 实例
 
 ```js
   let s = new Set()
@@ -22,7 +22,7 @@ ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都
 
 初始化的参数必须是可遍历的，可以是数组或者自定义遍历的数据结构。
 
-### [#](http://es.xiecheng.live/es6/set.html#添加数据)添加数据
+### 添加数据
 
 ```js
   s.add('hello')
@@ -39,7 +39,7 @@ ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都
 
 Set 数据结构不允许数据重复，所以添加重复的数据是无效的
 
-### [#](http://es.xiecheng.live/es6/set.html#删除数据)删除数据
+### 删除数据
 
 删除数据分两种，一种是删除指定的数据，一种是删除全部数据。
 
@@ -50,7 +50,7 @@ Set 数据结构不允许数据重复，所以添加重复的数据是无效的
   s.clear()
 ```
 
-### [#](http://es.xiecheng.live/es6/set.html#统计数据)统计数据
+### 统计数据
 
 Set 可以快速进行统计数据，如数据是否存在、数据的总数。
 
@@ -61,7 +61,7 @@ Set 可以快速进行统计数据，如数据是否存在、数据的总数。
   s.size // 2
 ```
 
-### [#](http://es.xiecheng.live/es6/set.html#数组去重)数组去重
+### 数组去重
 
 ```js
 let arr = [1, 2, 3, 4, 2, 3]
@@ -69,7 +69,7 @@ let s = new Set(arr)
 console.log(s)
 ```
 
-### [#](http://es.xiecheng.live/es6/set.html#合并去重)合并去重
+### 合并去重
 
 ```js
 let arr1 = [1, 2, 3, 4]
@@ -80,7 +80,7 @@ console.log([...s])
 console.log(Array.from(s))
 ```
 
-### [#](http://es.xiecheng.live/es6/set.html#交集)交集
+### 交集
 
 ```js
 let s1 = new Set(arr1)
@@ -89,7 +89,7 @@ let result = new Set(arr1.filter(item => s2.has(item)))
 console.log(Array.from(result))
 ```
 
-### [#](http://es.xiecheng.live/es6/set.html#差集)差集
+### 差集
 
 ```js
 let arr3 = new Set(arr1.filter(item => !s2.has(item)))
@@ -99,7 +99,7 @@ console.log(arr4)
 console.log([...arr3, ...arr4])
 ```
 
-## [#](http://es.xiecheng.live/es6/set.html#遍历方式)遍历方式
+## 遍历方式
 
 - keys()：返回键名的遍历器
 - values()：返回键值的遍历器
@@ -136,7 +136,7 @@ TIP
 
 不理解 SetIterator 没关系，后面会讲遍历器，耐心一点！
 
-## [#](http://es.xiecheng.live/es6/set.html#weakset)WeakSet
+## WeakSet
 
 WeakSet 结构与 Set 类似，也是不重复的值的集合。但是，它与 Set 有两个区别。
 
@@ -166,6 +166,6 @@ WeakSet 没有size属性，没有办法遍历它的成员。
 
 WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用，也就是说，如果其他对象都不再引用该对象，那么垃圾回收机制会自动回收该对象所占用的内存，不考虑该对象还存在于 WeakSet 之中。
 
-### [#](http://es.xiecheng.live/es6/set.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [Set](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set)

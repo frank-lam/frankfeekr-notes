@@ -1,6 +1,6 @@
 # Object
 
-## [#](http://es.xiecheng.live/es6/object.html#属性简洁表示法)属性简洁表示法
+## 属性简洁表示法
 
 在 ES6 之前 Object 的属性必须是 key-value 形式，如下：
 
@@ -30,7 +30,7 @@
   }
 ```
 
-## [#](http://es.xiecheng.live/es6/object.html#属性名表达式)属性名表达式
+## 属性名表达式
 
 在 ES6 可以直接用变量或者表达式来定义Object的 key。
 
@@ -42,7 +42,7 @@
   }
 ```
 
-## [#](http://es.xiecheng.live/es6/object.html#object-is)Object.is()
+## 
 
 判断两个对象是否相等。
 
@@ -65,7 +65,7 @@ let obj2 = obj1
 console.log(Object.is(obj1, obj2)) // true
 ```
 
-## [#](http://es.xiecheng.live/es6/object.html#object-assign)Object.assign()
+## 
 
 Object.assign() 方法用于将所有可枚举属性的值从一个或多个源对象复制到目标对象，它将返回目标对象。
 
@@ -158,13 +158,13 @@ TIP
 对象的浅拷贝：浅拷贝是对象共用的一个内存地址，对象的变化相互印象。
 对象的深拷贝：简单理解深拷贝是将对象放到新的内存中，两个对象的改变不会相互影响。
 
-### [#](http://es.xiecheng.live/es6/object.html#思考)思考
+### 思考
 
 1. 如果目标对象传入的是 undefined 和 null 将会怎样呢？
 2. 如果源对象的参数是 undefined 和 null 又会怎样呢？
 3. 如果目标对象是个嵌套的对象，子对象的属性会被覆盖吗？
 
-## [#](http://es.xiecheng.live/es6/object.html#对象的遍历方式)对象的遍历方式
+## 对象的遍历方式
 
 如何能够遍历出对象中每个key和value的值呢？
 
@@ -208,7 +208,7 @@ Reflect.ownKeys(obj).forEach(key => {
 })
 ```
 
-### [#](http://es.xiecheng.live/es6/object.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 1. [es6-enhanced-object-literals](https://www.sitepoint.com/es6-enhanced-object-literals/)
 2. [es6-features](https://codetower.github.io/es6-features/)

@@ -8,7 +8,7 @@
 
 对于面向对象编程而言，更关注类的声明、属性、方法、静态方法、继承、多态、私有属性。
 
-## [#](http://es.xiecheng.live/es6/class.html#声明类)声明类
+## 声明类
 
 首先我们要先来说明在 JavaScript 世界里如何声明一个 “类”。在 ES6 之前大家都是这么做的：
 
@@ -91,7 +91,7 @@ console.log(dog.hasOwnProperty('type')) //true
 
 这个表现也和 ES5 中直接使用 function 定义类的方式相同，所以得出一个结论：class 的方式是 function 方式的语法糖。
 
-## [#](http://es.xiecheng.live/es6/class.html#setters-getters)Setters & Getters
+## Setters & Getters
 
 对于类中的属性，可以直接在 constructor 中通过 this 直接定义，还可以直接在类的顶层来定义：
 
@@ -160,7 +160,7 @@ class Animal {
 }
 ```
 
-## [#](http://es.xiecheng.live/es6/class.html#静态方法)静态方法
+## 静态方法
 
 静态方法是面向对象最常用的功能，在 ES5 中利用 function 实现的类是这样实现一个静态方法的。
 
@@ -195,7 +195,7 @@ class Animal {
 
 有没有很清爽，代码可读性一下子就上来了。
 
-## [#](http://es.xiecheng.live/es6/class.html#继承)继承
+## 继承
 
 面向对象只所以可以应对复杂的项目实现，很大程度上要归功于继承。如果对继承概念不熟悉的同学，可以自行查询。在 ES5 中怎么实现继承呢？
 
@@ -251,12 +251,12 @@ class Dog extends Animal {
 
 虽然 ES6 在类的定义上仅是 ES5 定义类的语法糖，但是从开发者的角度而言，开发更有效率了，代码可阅读性大大提升。
 
-### [#](http://es.xiecheng.live/es6/class.html#练习)练习
+### 练习
 
 1. 请实现一个堆栈类，具备 push、pop 功能。
 2. 请回忆下自己在业务中有哪些场景可以用类来实现。
 
-### [#](http://es.xiecheng.live/es6/class.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [类](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)
 - [Classes (ES6) Sample](https://googlechrome.github.io/samples/classes-es6/)

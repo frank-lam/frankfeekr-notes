@@ -2,13 +2,13 @@
 
 在 ES6 中新增了很多实用的原生 API，方便开发者对 Array 的操控性更强，如 for...of、from、of、fill、find、findIndex等。
 
-## [#](http://es.xiecheng.live/es6/array.html#es5-中数组遍历方式)ES5 中数组遍历方式
+## ES5 中数组遍历方式
 
 ```js
 let arr = [1, 2, 3, 2, 4]
 ```
 
-### [#](http://es.xiecheng.live/es6/array.html#for循环)for循环
+### for循环
 
 ```js
 for (let i = 0; i < arr.length; i++) {
@@ -18,7 +18,7 @@ for (let i = 0; i < arr.length; i++) {
 
 后来语法有所升级，到 ES5 遍历数组的 API 多了起来，其中有 forEach、every、filter等，同样的功能可以用 forEach 、 map 、 every 等方法来实现。
 
-### [#](http://es.xiecheng.live/es6/array.html#foreach-没有返回值-只是针对每个元素调用func)forEach() 没有返回值，只是针对每个元素调用func
+###  没有返回值，只是针对每个元素调用func
 
 ```js
 arr.forEach(function(elem, index, array) {
@@ -47,7 +47,7 @@ arr.forEach(function(elem, index, array) {
 
 forEach 的代码块中不能使用 break、continue，它会抛出异常。
 
-### [#](http://es.xiecheng.live/es6/array.html#map-返回新的数组-每个元素为调用func的结果)map() 返回新的数组，每个元素为调用func的结果
+###  返回新的数组，每个元素为调用func的结果
 
 ```js
 let result = arr.map(function(value) {
@@ -58,7 +58,7 @@ let result = arr.map(function(value) {
 console.log(arr, result)
 ```
 
-### [#](http://es.xiecheng.live/es6/array.html#filter-返回符合func条件的元素数组)filter() 返回符合func条件的元素数组
+###  返回符合func条件的元素数组
 
 ```js
 let result = arr.filter(function(value) {
@@ -68,7 +68,7 @@ let result = arr.filter(function(value) {
 console.log(arr, result)
 ```
 
-### [#](http://es.xiecheng.live/es6/array.html#some-返回boolean-判断是否有元素符合func条件)some() 返回boolean，判断是否有元素符合func条件
+###  返回boolean，判断是否有元素符合func条件
 
 ```js
 let result = arr.some(function(value) {
@@ -78,7 +78,7 @@ let result = arr.some(function(value) {
 console.log(arr, result)
 ```
 
-### [#](http://es.xiecheng.live/es6/array.html#every-返回boolean-判断每个元素都符合func条件)every() 返回boolean，判断每个元素都符合func条件
+###  返回boolean，判断每个元素都符合func条件
 
 ```js
 let result = arr.every(function(value) {
@@ -94,7 +94,7 @@ console.log(arr, result)
 
 every 的代码块中不能使用 break、continue，它会抛出异常。
 
-### [#](http://es.xiecheng.live/es6/array.html#reduce-接收一个函数作为累加器)reduce() 接收一个函数作为累加器
+###  接收一个函数作为累加器
 
 ```js
 let sum = arr.reduce(function(prev, cur, index, array) {
@@ -127,7 +127,7 @@ for (var index in array) {
 for...in不能用于遍历数组。
 for...in代码块中不能有 return，不然会抛出异常。
 
-## [#](http://es.xiecheng.live/es6/array.html#es6-中数组遍历方式-for-of)ES6 中数组遍历方式 for...of
+## ES6 中数组遍历方式 for...of
 
 接下来就要步入正题，说说我们今天的主角：for...of。
 
@@ -170,7 +170,7 @@ TIP
 
 for...of是支持 break、continue、return的，所以在功能上非常贴近原生的 for。
 
-## [#](http://es.xiecheng.live/es6/array.html#array-from)Array.from()
+## 
 
 数组是开发中经常用到的数据结构，它非常好用。在 JavaScript 的世界里有些对象被理解为数组，然而缺不能使用数组的原生 API，比如函数中的 arguments、DOM中的 NodeList等。当然，还有一些可遍历的对象，看上去都像数组却不能直接使用数组的 API，因为它们是伪数组（Array-Like）。要想对这些对象使用数组的 API 就要想办法把它们转化为数组，传统的做法是这样的：
 
@@ -199,7 +199,7 @@ let arrLike = {
 }
 ```
 
-### [#](http://es.xiecheng.live/es6/array.html#惊喜)惊喜
+### 惊喜
 
 难道 Array.from 只能用来将伪数组转换成数组吗，还有其他用法吗？这要来看下 Array.from 的几个参数：
 
@@ -230,7 +230,7 @@ Array.from({
 
 这个代码看起来既简洁还容易理解，有咩有？
 
-## [#](http://es.xiecheng.live/es6/array.html#array-of)Array.of()
+## 
 
 Array.of() 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。
 
@@ -250,7 +250,7 @@ Array(1, 2, 3); // [1, 2, 3]
 | :------: | :--------------------------------------: | :--: |
 | elementN | 任意个参数，将按顺序成为返回数组中的元素 |  Y   |
 
-## [#](http://es.xiecheng.live/es6/array.html#array-prototype-fill)Array.prototype.fill()
+## 
 
 fill() 方法用一个固定值填充一个数组中从起始索引到终止索引内的全部元素。不包括终止索引。
 
@@ -262,7 +262,7 @@ array.fill(0, 1, 2)
 
 这个操作是将 array 数组的第二个元素（索引为1）到第三个元素（索引为2）内的数填充为 0，不包括第三个元素，所以结果是 [1, 0, 3, 4]
 
-### [#](http://es.xiecheng.live/es6/array.html#技巧)技巧
+### 技巧
 
 我们前面有提到用 Array.from 初始化为一个长度固定，元素为指定值的数组。如果用 fill 是否可以达到同样的效果呢？
 
@@ -283,7 +283,7 @@ fill 不具备遍历的功能，它是通过指定要操作的索引范围来进
 | start |      起始索引，默认值为0       |  N   |
 |  end  | 终止索引，默认值为 this.length |  N   |
 
-## [#](http://es.xiecheng.live/es6/array.html#array-prototype-find)Array.prototype.find()
+## 
 
 find() 方法返回数组中满足提供的测试函数的第一个元素的值，否则返回 undefined。
 
@@ -305,7 +305,7 @@ console.log(found);
 | callback | 在数组每一项上执行的函数，接收 3 个参数，element、index、array |  Y   |
 | thisArg  |                  执行回调时用作 this 的对象                  |  N   |
 
-## [#](http://es.xiecheng.live/es6/array.html#array-prototype-findindex)Array.prototype.findIndex()
+## 
 
 findIndex()方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。其实这个和 find() 是成对的，不同的是它返回的是索引而不是值。
 
@@ -327,7 +327,7 @@ console.log(found);
 | callback | 在数组每一项上执行的函数，接收 3 个参数，element、index、array |  Y   |
 | thisArg  |                  执行回调时用作 this 的对象                  |  N   |
 
-## [#](http://es.xiecheng.live/es6/array.html#array-prototype-copywithin)Array.prototype.copyWithin()
+## 
 
 在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。
 
@@ -345,6 +345,6 @@ console.log(arr.copyWithin(1, 3))
 // [1, 4, 5, 4, 5]
 ```
 
-### [#](http://es.xiecheng.live/es6/array.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)

@@ -1,6 +1,6 @@
 # Function
 
-## [#](http://es.xiecheng.live/es6/function.html#默认参数)默认参数
+## 默认参数
 
 对于函数而言，经常会用到参数，关于参数的默认值通常都是写在函数体中，如在 ES5 的时候大家都会这么写：
 
@@ -61,7 +61,7 @@ ajax('http://www.imooc.com', {
 })
 ```
 
-### [#](http://es.xiecheng.live/es6/function.html#拓展)拓展
+### 拓展
 
 在函数体内，有时候需要判断函数有几个参数，一共有2个办法。在 ES5 中可以在函数体内使用 arguments 来判断。
 
@@ -90,7 +90,7 @@ function foo(a = 2, b = 1, c) {
 foo('a', 'b') // 0
 ```
 
-## [#](http://es.xiecheng.live/es6/function.html#rest-参数)Rest 参数
+## Rest 参数
 
 在写函数的时候，部分情况我们不是很确定参数有多少个，比如求和运算，之前都是这么做的：
 
@@ -141,7 +141,7 @@ console.log(sum(30, 1, 2, 3, 4)) // 40
 
 arguments 不是数组，所以不能直接使用数组的原生 API 如 forEach，而 Rest Parameter 是数组，可以直接使用数组的原生 API。
 
-## [#](http://es.xiecheng.live/es6/function.html#扩展运算符)扩展运算符
+## 扩展运算符
 
 Spread Operator 和 Rest Parameter 是形似但相反意义的操作符，简单的来说 Rest Parameter 是把不定的参数“收敛”到数组，而 Spread Operator 是把固定的数组内容“打散”到对应的参数。示例如下：
 
@@ -169,7 +169,7 @@ console.log(sum.apply(null, [4, 5, 6])) // 15
 
 这种代码是否似曾相识？所以有了 Spread Operator 你的操作将更加简单！
 
-## [#](http://es.xiecheng.live/es6/function.html#length属性)length属性
+## length属性
 
 函数指定了默认值以后，函数的length属性，将返回没有指定默认值的参数个数。
 
@@ -181,7 +181,7 @@ console.log(foo.length)
 // 0
 ```
 
-## [#](http://es.xiecheng.live/es6/function.html#name属性)name属性
+## name属性
 
 函数的name属性，返回该函数的函数名。
 
@@ -191,7 +191,7 @@ function foo() {}
 foo.name // "foo"
 ```
 
-## [#](http://es.xiecheng.live/es6/function.html#箭头函数)箭头函数
+## 箭头函数
 
 箭头函数可以说是 ES6 很大的福利了，不管你是函数式爱好者还是面向对象开发者，函数是必须要用到的东西。之前声明函数需要使用 function，如下：
 
@@ -256,7 +256,7 @@ TIP
 
   其他情况就要中规中矩的写好啦！
 
-### [#](http://es.xiecheng.live/es6/function.html#拓展-2)拓展
+### 拓展
 
 看上去箭头函数真的很漂亮，可是它有什么神秘之处吗？this，对，就是它。普通函数和箭头函数对 this 的处理方式是截然不同的。
 
@@ -293,12 +293,12 @@ console.log(foo.say()) // undefined
 
 3、箭头函数不可以使用arguments对象
 
-### [#](http://es.xiecheng.live/es6/function.html#练习)练习
+### 练习
 
 1. 如何用箭头函数来实现一个数组排序的问题
 2. 箭头函数对 this 的处理还有什么妙用
 
-### [#](http://es.xiecheng.live/es6/function.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [箭头函数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [默认参数](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)

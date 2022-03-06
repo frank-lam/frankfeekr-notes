@@ -1,6 +1,6 @@
 # Number
 
-## [#](http://es.xiecheng.live/es6/number.html#二进制与八进制)二进制与八进制
+## 二进制与八进制
 
 请大家思考在JS中如何把十进制转化为二进制？
 
@@ -28,9 +28,9 @@ const b = 0O777
 console.log(b)
 ```
 
-## [#](http://es.xiecheng.live/es6/number.html#新增方法)新增方法
+## 新增方法
 
-### [#](http://es.xiecheng.live/es6/number.html#number-isfinite)Number.isFinite()
+### 
 
 用来检查一个数值是否为有限的（finite），即不是Infinity。
 
@@ -45,7 +45,7 @@ Number.isFinite('15') // false
 Number.isFinite(true) // false
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-isnan)Number.isNaN()
+### 
 
 用来检查一个值是否为NaN。
 
@@ -59,7 +59,7 @@ Number.isNaN('true' / 0) // true
 Number.isNaN('true' / 'true') // true
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-parseint)Number.parseInt()
+### 
 
 ES6 将全局方法parseInt()移植到Number对象上面，行为完全保持不变。 这样做的目的，是逐步减少全局性方法，使得语言逐步模块化。
 
@@ -71,7 +71,7 @@ parseInt('12.34') // 12
 Number.parseInt('12.34') // 12
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-parsefloat)Number.parseFloat()
+### 
 
 ES6 将全局方法parseFloat()移植到Number对象上面，行为完全保持不变。这样做的目的，是逐步减少全局性方法，使得语言逐步模块化。
 
@@ -83,7 +83,7 @@ parseFloat('123.45#') // 123.45
 Number.parseFloat('123.45#') // 123.45
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-isinteger)Number.isInteger()
+### 
 
 用来判断一个数值是否为整数。
 
@@ -97,7 +97,7 @@ Number.isInteger('15') // false
 Number.isInteger(true) // false
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-max-safe-integer)Number.MAX_SAFE_INTEGER
+### Number.MAX_SAFE_INTEGER
 
 ```js
 Number.MAX_SAFE_INTEGER === Math.pow(2, 53) - 1 // true
@@ -105,7 +105,7 @@ Number.MAX_SAFE_INTEGER === Math.pow(2, 53) - 1 // true
 Number.MAX_SAFE_INTEGER === 9007199254740991 // true
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-min-safe-integer)Number.MIN_SAFE_INTEGER
+### Number.MIN_SAFE_INTEGER
 
 ```js
 Number.MIN_SAFE_INTEGER === -Number.MAX_SAFE_INTEGER // true
@@ -113,7 +113,7 @@ Number.MIN_SAFE_INTEGER === -Number.MAX_SAFE_INTEGER // true
 Number.MIN_SAFE_INTEGER === -9007199254740991 // true
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#number-issafeinteger)Number.isSafeInteger()
+### 
 
 JavaScript 能够准确表示的整数范围在-2^53到2^53之间（不含两个端点），超过这个范围，无法精确表示这个值。
 
@@ -123,9 +123,9 @@ Math.pow(2, 53) // 9007199254740992
 Math.pow(2, 53) === Math.pow(2, 53) + 1 // true
 ```
 
-## [#](http://es.xiecheng.live/es6/number.html#math扩展)Math扩展
+## Math扩展
 
-### [#](http://es.xiecheng.live/es6/number.html#math-trunc)Math.trunc()
+### 
 
 方法用于去除一个数的小数部分，返回整数部分。
 
@@ -139,7 +139,7 @@ console.log(Math.trunc(undefined)) // NaN
 console.log(Math.trunc()) // NaN
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#math-sign)Math.sign()
+### 
 
 方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。
 
@@ -160,7 +160,7 @@ console.log(Math.sign(true)) // 1
 console.log(Math.sign(false)) // 0
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#math-cbrt)Math.cbrt()
+### 
 
 方法用于计算一个数的立方根。
 
@@ -170,7 +170,7 @@ console.log(Math.cbrt(8)) // 2
 console.log(Math.cbrt('imooc')) // NaN
 ```
 
-### [#](http://es.xiecheng.live/es6/number.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [Number](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [Math](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math)

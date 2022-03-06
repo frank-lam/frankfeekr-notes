@@ -2,7 +2,7 @@
 
 在 ES6 标准中新增的一个非常强大的功能是 Proxy，它可以自定义一些常用行为如查找、赋值、枚举、函数调用等。通过 Proxy 这个名称也可以看出来它包含了“代理”的含义，只要有“代理”的诉求都可以考虑使用 Proxy 来实现。
 
-## [#](http://es.xiecheng.live/es6/proxy.html#基本语法)基本语法
+## 基本语法
 
 **语法**
 
@@ -19,7 +19,7 @@ let p = new Proxy(target, handler)
 
 MDN 给出的解释偏官方，通俗的讲第一个参数 target 就是用来代理的“对象”，被代理之后它是不能直接被访问的，而 handler 就是实现代理的过程。
 
-## [#](http://es.xiecheng.live/es6/proxy.html#拦截操作场景)拦截操作场景
+## 拦截操作场景
 
 **场景**
 
@@ -168,9 +168,9 @@ class Component {
 }
 ```
 
-## [#](http://es.xiecheng.live/es6/proxy.html#常用拦截操作)常用拦截操作
+## 常用拦截操作
 
-### [#](http://es.xiecheng.live/es6/proxy.html#get)get
+### get
 
 拦截对象属性的读取，比如proxy.foo和proxy['foo']。
 
@@ -197,7 +197,7 @@ console.log(dict['world'])
 console.log(dict['imooc'])
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#set)set
+### set
 
 拦截对象属性的设置，比如proxy.foo = v或proxy['foo'] = v，返回一个布尔值。
 
@@ -218,7 +218,7 @@ arr.push(6)
 console.log(arr[0], arr[1], arr.length)
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#has)has
+### has
 
 拦截propKey in proxy的操作，返回一个布尔值。
 
@@ -237,7 +237,7 @@ console.log(2 in range)
 console.log(9 in range)
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#ownkeys)ownKeys
+### ownKeys
 
 拦截Object.getOwnPropertyNames(proxy)、Object.getOwnPropertySymbols(proxy)、Object.keys(proxy)、for...in循环，返回一个数组。该方法返回目标对象所有自身的属性的属性名，而Object.keys()的返回结果仅包括目标对象自身的可遍历属性。
 
@@ -269,7 +269,7 @@ userinfo = new Proxy(userinfo, {
 console.log(Object.keys(userinfo))
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#deleteproperty)deleteProperty
+### deleteProperty
 
 拦截delete proxy[propKey]的操作，返回一个布尔值。
 
@@ -330,7 +330,7 @@ for (let key in user) {
 }
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#apply)apply
+### apply
 
 拦截 Proxy 实例作为函数调用的操作，比如proxy(...args)、proxy.call(object, ...args)、proxy.apply(...)。
 
@@ -353,7 +353,7 @@ console.log(sum.call(null, 1, 2, 3))
 console.log(sum.apply(null, [1, 2, 3]))
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#construct)construct
+### construct
 
 拦截 Proxy 实例作为构造函数调用的操作，比如new proxy(...args)。
 
@@ -372,7 +372,7 @@ User = new Proxy(User, {
 console.log(new User('imooc'))
 ```
 
-### [#](http://es.xiecheng.live/es6/proxy.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [ES6 Proxies in Depth](https://ponyfoo.com/articles/es6-proxies-in-depth)
 - [Meta Programming In JavaScript - Part Three: Proxies and Reflection](https://lucasfcosta.com/2016/11/15/Meta-Programming-in-JavaScript-Part-Three.html)

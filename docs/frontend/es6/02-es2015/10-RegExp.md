@@ -1,6 +1,6 @@
 # RegExp
 
-## [#](http://es.xiecheng.live/es6/regexp.html#y修饰符)y修饰符
+## y修饰符
 
 ES6为正则表达式添加了y修饰符，叫做“粘连”（sticky）修饰符。
 
@@ -91,7 +91,7 @@ sticky 模式在正则匹配过程中只会影响两件事：
 - 匹配必须从 re.lastIndex 开始（相当于正则表达中的 ^）
 - 如果匹配到会修改 re.lastIndex（相当于 g 模式）
 
-## [#](http://es.xiecheng.live/es6/regexp.html#u修饰符)u修饰符
+## u修饰符
 
 ES6为正则表达式添加了u修饰符，含义为“Unicode模式”，用来正确处理大于 `\uFFFF` 的Unicode字符。也就是说，会正确处理四个字节的UTF-16编码。
 
@@ -203,7 +203,7 @@ codePointLength(s) // 2
 
 上面代码中，不加u修饰符，就无法识别非规范的K字符。
 
-### [#](http://es.xiecheng.live/es6/regexp.html#推荐阅读)推荐阅读
+### 推荐阅读
 
 - [Unicode与JavaScript详解](http://www.ruanyifeng.com/blog/2014/12/unicode.html)
 - [New regular expression features in ECMAScript 6](http://2ality.com/2015/07/regexp-es6.html)
