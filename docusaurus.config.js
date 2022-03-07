@@ -98,10 +98,22 @@ const config = {
             label: '前言',
           },
           {
-            type: 'docSidebar',
-            position: 'left',
-            sidebarId: 'backend',
-            label: '后台架构',
+            activeBasePath: "docs", // 路径
+            label: "后台架构",
+            position: "left",
+            items: [
+
+              {
+                type: 'docSidebar',
+                sidebarId: 'backend_java',
+                label: 'Java 基础知识',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'backend',
+                label: '总览',
+              },
+            ],
           },
           // {
           //   type: 'docSidebar',
@@ -119,6 +131,11 @@ const config = {
                 type: 'docSidebar',
                 sidebarId: 'frontend_es6',
                 label: 'ECMAScript2015~2020语法全解析',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'frontend_angular',
+                label: 'Angualr',
               },
               // {
               //   label: "ECMAScript2015~2020语法全解析",
@@ -221,7 +238,7 @@ const config = {
         //     ],
         //   },
         // ],
-        copyright: `Copyright © ${new Date().getFullYear()} 技术之禅`,
+        copyright: `Copyright © ${new Date().getFullYear()} 技术小匠 · 知识笔记`,
       },
       prism: {
         // theme: require('prism-react-renderer/themes/dracula'),

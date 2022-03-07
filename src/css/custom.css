@@ -118,7 +118,7 @@ img.themedImage_node_modules-\@docusaurus-theme-classic-lib-next-theme-ThemedIma
 
 
 /* 统一两种 h1 标题的样式 */
-header>h1,h1 {
+header>h1,.theme-doc-markdown>h1 {
   font-size: 2.5rem !important;
   padding-bottom: 15px;
   border-bottom: 1px solid #eaeaea;
