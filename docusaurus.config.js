@@ -138,6 +138,12 @@ const config = {
           {
             type: 'docSidebar',
             position: 'left',
+            sidebarId: 'tools',
+            label: '技术工具',
+          },
+          {
+            type: 'docSidebar',
+            position: 'left',
             sidebarId: 'about',
             label: '关于本站',
           },
