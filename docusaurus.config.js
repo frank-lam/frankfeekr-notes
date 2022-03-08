@@ -170,11 +170,19 @@ const config = {
             position: 'left',
             items: [
               {
-                label: 'LinTools - 开发者的在线导航',
+                label: '🔍 本站搜索',
+                to: '/search',
+              },
+              {
+                label: '😄 EMOJIALL',
+                href: 'https://www.emojiall.com/zh-hans/all-emojis',
+              },
+              {
+                label: '🧭 LinTools - 开发者的在线导航',
                 href: 'https://tools.frankfeekr.cn/',
               },
               {
-                label: 'frankfeekr.cn - 我的博客',
+                label: '🧑🏼‍💻 frankfeekr.cn - 我的博客',
                 href: 'https://frankfeekr.cn/',
               }
             ],
