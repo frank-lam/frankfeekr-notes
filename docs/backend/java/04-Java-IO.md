@@ -1,31 +1,3 @@
-<!-- TOC -->
-
-- [Java IO](#java-io)
-    - [1、磁盘操作（File）](#1磁盘操作file)
-    - [2、字节操作（*Stream）](#2字节操作stream)
-    - [3、字符操作（*Reader | *Writer）](#3字符操作reader--writer)
-    - [4、Java序列化，如何实现序列化和反序列化，常见的序列化协议有哪些？](#4java序列化如何实现序列化和反序列化常见的序列化协议有哪些)
-        - [Java序列化定义](#java序列化定义)
-        - [如何实现序列化和反序列化，底层怎么实现](#如何实现序列化和反序列化底层怎么实现)
-        - [相关注意事项](#相关注意事项)
-        - [常见的序列化协议有哪些](#常见的序列化协议有哪些)
-    - [5、同步和异步](#5同步和异步)
-    - [6、Java中的NIO，BIO，AIO分别是什么](#6java中的niobioaio分别是什么)
-        - [BIO](#bio)
-        - [NIO](#nio)
-        - [AIO (NIO.2)](#aio-nio2)
-        - [总结](#总结)
-    - [7、BIO，NIO，AIO区别](#7bionioaio区别)
-    - [8、Stock通信的伪代码实现流程](#8stock通信的伪代码实现流程)
-    - [9、网络操作](#9网络操作)
-        - [InetAddress](#inetaddress)
-        - [URL](#url)
-        - [Sockets](#sockets)
-        - [Datagram](#datagram)
-        - [什么是Socket？](#什么是socket)
-
-<!-- /TOC -->
-
 # Java IO
 
 Java 的 I/O 大概可以分成以下几类：
@@ -39,7 +11,7 @@ Java 的 I/O 大概可以分成以下几类：
 
 
 
-## 1、磁盘操作（File）
+### 1、磁盘操作（File）
 
 File 类可以用于表示文件和目录的信息，但是它不表示文件的内容。
 
@@ -63,7 +35,7 @@ public static void listAllFiles(File dir)
 
 
 
-## 2、字节操作（*Stream）
+### 2、字节操作（*Stream）
 
 使用字节流操作进行文件复制：
 
@@ -103,7 +75,7 @@ DataInputStream 装饰者提供了对更多数据类型进行输入的操作，�
 
 
 
-## 3、字符操作（*Reader | *Writer）
+### 3、字符操作（*Reader | *Writer）
 
 不管是磁盘还是网络传输，最小的存储单元都是字节，而不是字符。**但是在程序中操作的通常是字符形式的数据，因此需要提供对字符进行操作的方法。**
 
@@ -161,9 +133,9 @@ byte[] bytes = str1.getBytes();
 
 
 
-## 4、Java序列化，如何实现序列化和反序列化，常见的序列化协议有哪些？ 
+### 4、Java序列化，如何实现序列化和反序列化，常见的序列化协议有哪些？ 
 
-### Java序列化定义 
+#### Java序列化定义 
 
 （1）Java序列化是指把Java对象转换为字节序列的过程，而Java反序列化是指把字节序列恢复为Java对象的过程；
 
@@ -173,7 +145,7 @@ byte[] bytes = str1.getBytes();
 
 （4）本质上讲，序列化就是把实体对象状态按照一定的格式写入到有序字节流，反序列化就是从有序字节流重建对象，恢复对象状态。
 
-### 如何实现序列化和反序列化，底层怎么实现
+#### 如何实现序列化和反序列化，底层怎么实现
 
 **1、JDK类库中序列化和反序列化API**
 
@@ -279,7 +251,7 @@ public class User implements Serializable {
 
 
 
-### 相关注意事项
+#### 相关注意事项
 
 1、序列化时，只对对象的状态进行保存，而不管对象的方法；
 
@@ -321,7 +293,7 @@ private transient Object[] elementData;
 
 
 
-### 常见的序列化协议有哪些 
+#### 常见的序列化协议有哪些 
 
 - COM主要用于Windows平台，并没有真正实现跨平台，另外COM的序列化的原理利用了编译器中虚表，使得其学习成本巨大。 
 
@@ -360,7 +332,7 @@ private transient Object[] elementData;
 
 
 
-## 5、同步和异步
+### 5、同步和异步
 
 同步IO：
 
@@ -378,7 +350,7 @@ private transient Object[] elementData;
 
 
 
-## 6、Java中的NIO，BIO，AIO分别是什么
+### 6、Java中的NIO，BIO，AIO分别是什么
 
 - **同步阻塞IO（BIO）**：用户进程发起一个IO操作以后，必须等待IO操作的真正完成后，才能继续运行；
 - **同步非阻塞IO（NIO）**：用户进程发起一个IO操作以后，可做其它事情，但用户进程需要经常询问IO操作是否完成，这样造成不必要的CPU资源浪费；
@@ -396,7 +368,7 @@ private transient Object[] elementData;
 
 
 
-### BIO 
+#### BIO 
 
 **定义：**BIO 全称Block-IO 是一种**阻塞同步**的通信模式。我们常说的Stock IO 一般指的是BIO。是一个比较传统的通信方式，**模式简单**，**使用方便**。但**并发处理能力低**，**通信耗时**，**依赖网速**。
 
@@ -436,7 +408,7 @@ BIO模型中通过 **Socket** 和 **ServerSocket** 完成套接字通道的实�
 
 
 
-### NIO
+#### NIO
 
 NIO（官方：New IO），也叫Non-Block IO 是一种**同步非阻塞**的通信模式。
 
@@ -457,7 +429,7 @@ NIO 通过一个线程轮询，实现千万个客户端的请求，这就是非�
 
 
 
-### AIO (NIO.2)
+#### AIO (NIO.2)
 
 - 异步非阻塞，服务器实现模式为一个有效请求一个线程，客户端的I/O请求都是由OS先完成了再通知服务器应用去启动线程进行处理. 
 - AIO方式使用于连接数目多且连接比较长（重操作）的架构，比如**相册服务器**，充分调用OS参与并发操作，编程比较复杂，JDK7开始支持。 
@@ -468,7 +440,7 @@ AIO 并没有采用NIO的多路复用器，而是使用异步通道的概念。�
 
 
 
-### 总结
+#### 总结
 
 1. BIO模型中通过**Socket**和**ServerSocket**完成套接字通道实现。阻塞，同步，连接耗时。
 2. NIO模型中通过**SocketChannel**和**ServerSocketChannel**完成套接字通道实现。非阻塞/阻塞，同步，避免TCP建立连接使用三次握手带来的开销。
@@ -491,7 +463,7 @@ AIO 并没有采用NIO的多路复用器，而是使用异步通道的概念。�
 
 
 
-## 7、BIO，NIO，AIO区别
+### 7、BIO，NIO，AIO区别
 
 - **BIO（同步阻塞）**：客户端和服务器连接需要三次握手，使用简单，但吞吐量小
 - **NIO（同步非阻塞）**：客户端与服务器通过Channel连接，采用多路复用器轮询注册的Channel。提高吞吐量和可靠性。
@@ -501,7 +473,7 @@ AIO 并没有采用NIO的多路复用器，而是使用异步通道的概念。�
 
 
 
-## 8、Stock通信的伪代码实现流程
+### 8、Stock通信的伪代码实现流程
 
 1. 服务器绑定端口：server = new ServerSocket(PORT)
 2. 服务器阻塞监听：socket = server.accept()
@@ -512,7 +484,7 @@ AIO 并没有采用NIO的多路复用器，而是使用异步通道的概念。�
 
 
 
-## 9、网络操作
+### 9、网络操作
 
 Java 中的网络支持：
 
@@ -521,7 +493,7 @@ Java 中的网络支持：
 - Sockets：使用 TCP 协议实现网络通信；
 - Datagram：使用 UDP 协议实现网络通信。
 
-### InetAddress
+#### InetAddress
 
 没有公有构造函数，只能通过静态方法来创建实例。
 
@@ -532,7 +504,7 @@ InetAddress.getByAddress(byte[] address);
 
 
 
-### URL
+#### URL
 
 可以直接从 URL 中读取字节流数据。
 
@@ -556,7 +528,7 @@ public static void main(String[] args) throws IOException
 
 
 
-### Sockets
+#### Sockets
 
 - ServerSocket：服务器端类
 - Socket：客户端类
@@ -576,7 +548,7 @@ public static void main(String[] args) throws IOException
 
 
 
-### Datagram
+#### Datagram
 
 - DatagramPacket：数据包类
 - DatagramSocket：通信类
@@ -585,7 +557,7 @@ public static void main(String[] args) throws IOException
 
 
 
-### 什么是Socket？
+#### 什么是Socket？
 
 > TCP用主机的IP地址加上主机上的端口号作为TCP连接的端点，这种端点就叫做套接字（socket）或插口。 
 >
