@@ -182,7 +182,7 @@ const config = {
                 href: 'https://tools.frankfeekr.cn/',
               },
               {
-                label: '🧑🏼‍💻 frankfeekr.cn - 我的博客',
+                label: '👨‍💻 frankfeekr.cn - 我的博客',
                 href: 'https://frankfeekr.cn/',
               }
             ],
