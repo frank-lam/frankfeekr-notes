@@ -201,14 +201,23 @@ const config = {
           // },
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/frank-lam/frankfeekr-notes/actions',
-            label: 'Actions',
+            type: 'dropdown',
+            label: 'Links',
             position: 'right',
-          },
-          {
-            href: 'https://github.com/frank-lam/fullstack-tutorial',
-            label: 'GitHub',
-            position: 'right',
+            items: [
+              {
+                label: 'Issues',
+                href: 'https://github.com/frank-lam/frankfeekr-notes/issues',
+              },
+              {
+                label: 'Actions',
+                href: 'https://github.com/frank-lam/frankfeekr-notes/actions',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/frank-lam/fullstack-tutorial',
+              }
+            ],
           },
         ],
       },
