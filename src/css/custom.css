@@ -110,7 +110,7 @@
 
   .menu__link--active:not(.menu__link--sublist) {
     background-color: var(--ifm-menu-color-background-active);
-    border-left: 5px solid #4183c4!important;
+    border-left: 5px solid #0969da!important;
   }
 
 
