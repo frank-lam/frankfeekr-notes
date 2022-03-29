@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: '极致的阅读体验',
-    Svg: require('@site/static/img/undraw/undraw_reading_time.svg').default,
+    Svg: require('@site/static/img/undraw/v2/undraw_reading_time.svg').default,
     description: (
       <>
         文档使用 Docusaurus 构建，极致阅读体验
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: '高效的文档检索',
-    Svg: require('@site/static/img/undraw/undraw_taking_notes.svg').default,
+    Svg: require('@site/static/img/undraw/v2/undraw_taking_notes.svg').default,
     description: (
       <>
         支持中英文检索，文章目录导航，快速定位知识
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: '全面的知识体系',
-    Svg: require('@site/static/img/undraw/undraw_scrum_board.svg').default,
+    Svg: require('@site/static/img/undraw/v2/undraw_hello.svg').default,
     description: (
       <>
         大前端、后台技术、大数据等主流技术栈
