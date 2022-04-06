@@ -206,6 +206,10 @@ const config = {
                 href: 'https://github.com/frank-lam/todolist/issues/10',
               },
               {
+                label: 'todolist/issues',
+                href: 'https://github.com/frank-lam/todolist/issues',
+              },
+              {
                 label: 'GitHub',
                 href: 'https://github.com/frank-lam/fullstack-tutorial',
               }
