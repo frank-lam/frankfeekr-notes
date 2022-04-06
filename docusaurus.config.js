@@ -85,12 +85,6 @@ const config = {
           src: 'img/idea.svg',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: '公共部分',
-          // },
           {
             type: 'docSidebar',
             position: 'left',
@@ -115,12 +109,6 @@ const config = {
               },
             ],
           },
-          // {
-          //   type: 'docSidebar',
-          //   position: 'left',
-          //   sidebarId: 'frontend',
-          //   label: '前端技术',
-          // },
           {
             activeBasePath: "docs", // 路径
             label: "前端技术",
@@ -206,12 +194,16 @@ const config = {
             position: 'right',
             items: [
               {
-                label: 'Issues',
+                label: 'frankfeekr-notes/issues',
                 href: 'https://github.com/frank-lam/frankfeekr-notes/issues',
               },
               {
-                label: 'Actions',
+                label: 'frankfeekr-notes/actions',
                 href: 'https://github.com/frank-lam/frankfeekr-notes/actions',
+              },
+              {
+                label: 'todolist/issues/10',
+                href: 'https://github.com/frank-lam/todolist/issues/10',
               },
               {
                 label: 'GitHub',
@@ -220,6 +212,11 @@ const config = {
             ],
           },
         ],
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       footer: {
         style: 'dark',
