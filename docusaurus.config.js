@@ -220,7 +220,7 @@ const config = {
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
-        respectPrefersColorScheme: false,
+        // respectPrefersColorScheme: false,
       },
       footer: {
         style: 'dark',
