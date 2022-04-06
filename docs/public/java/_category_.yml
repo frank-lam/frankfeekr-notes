@@ -1,8 +1,0 @@
-position: 2.5 # float position is supported
-label: '基础知识'
-collapsible: false # make the category collapsible
-collapsed: false # keep the category open by default. 展开目录: false, 不展开: true
-className: red
-link:
-  type: generated-index
-  title: Tutorial overview
