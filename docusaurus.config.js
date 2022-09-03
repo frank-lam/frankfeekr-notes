@@ -274,6 +274,9 @@ const config = {
         // theme: require('prism-react-renderer/themes/vsDark'),
         // theme: require('prism-react-renderer/themes/vsLight'),
         darkTheme: require('prism-react-renderer/themes/dracula'),
+        additionalLanguages: ["kotlin", "java"],
+        // Adding Java Syntax highlighting makes dependency Redoc break · Issue #7209 · facebook/docusaurus
+        // https://github.com/facebook/docusaurus/issues/7209  
       },
       tableOfContents: {
         minHeadingLevel: 2,
