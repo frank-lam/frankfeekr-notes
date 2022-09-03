@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknotes_frankfeekr_cn=self.webpackChunknotes_frankfeekr_cn||[]).push([[1633],{2511:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","name":"facebook","count":1,"permalink":"/blog/tags/facebook"}')}}]);
