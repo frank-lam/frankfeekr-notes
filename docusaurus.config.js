@@ -279,7 +279,7 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 6
       },
-      hideableSidebar: true, // 可以折叠隐藏的侧边栏
+      // hideableSidebar: true, // 可以折叠隐藏的侧边栏
       zoomSelector: '.markdown img',
     }),
 };
