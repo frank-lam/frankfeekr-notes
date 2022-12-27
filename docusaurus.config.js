@@ -194,12 +194,12 @@ const config = {
             position: 'right',
             items: [
               {
-                label: 'frankfeekr-notes/issues',
-                href: 'https://github.com/frank-lam/frankfeekr-notes/issues',
+                label: '⚡️frankfeekr-notes/actions',
+                href: 'https://github.com/frank-lam/frankfeekr-notes/actions',
               },
               {
-                label: 'frankfeekr-notes/actions',
-                href: 'https://github.com/frank-lam/frankfeekr-notes/actions',
+                label: 'frankfeekr-notes/issues',
+                href: 'https://github.com/frank-lam/frankfeekr-notes/issues',
               },
               {
                 label: 'todolist/issues/10',
