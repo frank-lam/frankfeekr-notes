@@ -96,11 +96,15 @@ const config = {
             label: "后台架构",
             position: "left",
             items: [
-
               {
                 type: 'docSidebar',
                 sidebarId: 'backend_java',
                 label: 'Java 基础知识',
+              },
+              {
+                type: 'docSidebar',
+                sidebarId: 'backend_python',
+                label: 'Python 基础知识',
               },
               {
                 type: 'docSidebar',
