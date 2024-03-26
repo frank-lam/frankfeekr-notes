@@ -37,7 +37,7 @@ console.log(3)
 // 1、3、2
 ```
 
-下图说明了同步任务和异步任务的执行过程： ![img](http://es.xiecheng.live/assets/img/task.9fef93a6.png)
+下图说明了同步任务和异步任务的执行过程： ![img](assets/task.9fef93a6-17114659869421.png)
 
 ### Ajax原理
 
@@ -191,7 +191,7 @@ TIP
 
 在这里必须说明下 Promise 内部是有状态的(pending、fulfilled、rejected)，Promise 对象根据状态来确定执行哪个方法。Promise 在实例化的时候状态是默认 pending 的，当异步操作是完成的，状态会被修改为 fulfilled，如果异步操作遇到异常，状态会被修改为 rejected，可以通过下图来看下状态的走向：
 
-![img](http://es.xiecheng.live/assets/img/promise.04ed9cc2.png)
+![img](assets/promise.04ed9cc2-17114659947444.png)
 
 注意
 
