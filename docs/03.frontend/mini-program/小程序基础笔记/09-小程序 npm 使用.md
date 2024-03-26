@@ -22,7 +22,7 @@
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/构建完成.jpg" style="zoom:80%;" />
+<img src="assets/构建完成.jpg" style="zoom:80%;" />
 
 
 
@@ -59,7 +59,7 @@
    npm init -y
    ```
 
-   <img src="http://8.131.91.46:6677/mina/base/46-初始化package.jpg" style="zoom:80%;" />
+   <img src="assets/46-初始化package.jpg" style="zoom:80%;" />
 
    
 
@@ -69,15 +69,15 @@
    npm i @vant/weapp -S --production
    ```
 
-   ![](http://8.131.91.46:6677/mina/base/vant-weapp.jpg)
+   ![](assets/vant-weapp.jpg)
 
    
 
 3. 构建 npm
 
-   <img src="http://8.131.91.46:6677/mina/base/构建vant-weapp.jpg" style="zoom:60%;" />
+   <img src="assets/构建vant-weapp.jpg" style="zoom:60%;" />
 
-   <img src="http://8.131.91.46:6677/mina/base/vant 构建完成.jpg" style="zoom:67.8%;" />
+   <img src="assets/vant 构建完成.jpg" style="zoom:67.8%;" />
 
 
 
@@ -114,7 +114,7 @@
 
 6. 页面预览效果
 
-<img src="http://8.131.91.46:6677/mina/base/vant 组件库.jpg" style="zoom:60%; border: 1px solid #ccc" />
+<img src="assets/vant 组件库.jpg" style="zoom:60%; border: 1px solid #ccc" />
 
 
 
@@ -134,7 +134,7 @@
 
 但是在调整目录以后，我们按照上一小节 `Vant Weapp` 的构建流程进行构建，发现没有构建成功，并且弹出构建失败的弹框
 
-<img src="http://8.131.91.46:6677/mina/base/构建失败.jpg" style="zoom:76%;" />
+<img src="assets/构建失败.jpg" style="zoom:76%;" />
 
 
 
@@ -403,7 +403,7 @@ Page({
 
 `Vant Weapp` 的所有组件都开启了`addGlobalClass: true`以接受外部样式的影响，因此我们可以通过审核元素的方式获取当前元素的类名，然后复制到组件的 `.wxss` 中进行修改
 
-<img src="http://8.131.91.46:6677/mina/base/接触样式隔离.jpg" style="zoom:80%;" />
+<img src="assets/接触样式隔离.jpg" style="zoom:80%;" />
 
 
 
@@ -417,7 +417,7 @@ Page({
 
 需要注意的是普通样式类和外部样式类的优先级是未定义的，因此使用时请添加`!important`以保证外部样式类的优先级。
 
-<img src="http://8.131.91.46:6677/mina/base/自定义样式类.jpg" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/自定义样式类.jpg" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -482,7 +482,7 @@ page {
 
 
 
-![](http://8.131.91.46:6677/mina/base/CSS 变量修改演示.jpg)
+![](assets/CSS 变量修改演示.jpg)
 
 
 

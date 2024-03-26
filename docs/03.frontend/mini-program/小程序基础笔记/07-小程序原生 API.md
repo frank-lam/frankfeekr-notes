@@ -18,7 +18,7 @@
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/小程序 API 类型.png" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/小程序 API 类型.png" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -77,7 +77,7 @@ wx.request({
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/038-网络请求错误.png" style="zoom:80%;" />
+<img src="assets/038-网络请求错误.png" style="zoom:80%;" />
 
 
 
@@ -85,9 +85,9 @@ wx.request({
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/39-开发设置.png" style="zoom:47.5%; border: 1px solid #ccc" />
+<img src="assets/39-开发设置.png" style="zoom:47.5%; border: 1px solid #ccc" />
 
-<img src="http://8.131.91.46:6677/mina/base/40-配置服务器域名.png" style="zoom:49.4%; border: 1px solid #ccc" />
+<img src="assets/40-配置服务器域名.png" style="zoom:49.4%; border: 1px solid #ccc" />
 
 
 
@@ -97,7 +97,7 @@ wx.request({
 
 将 **不校验合法域名、web-view (业务域名)、TLS版本以及HTTPS证书** 勾选上：
 
-​      <img src="http://8.131.91.46:6677/mina/base/41-不校验合法域名.png" style="zoom:61%;" />       <img src="http://8.131.91.46:6677/mina/base/41-不校验合法域名-1.png" style="zoom:50.25%;" /> 
+​      <img src="assets/41-不校验合法域名.png" style="zoom:61%;" />       <img src="assets/41-不校验合法域名-1.png" style="zoom:50.25%;" /> 
 
 
 
@@ -162,7 +162,7 @@ Page({
 
 小程序提供了一些用于界面交互的 API，例如： loading 提示框、消息提示框、模态对话框等 API。
 
-<img src="http://8.131.91.46:6677/mina/base/loading 提示框.gif" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/loading 提示框.gif" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -314,7 +314,7 @@ wx.showModal({
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/模态对话框以及消息提示框.gif" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/模态对话框以及消息提示框.gif" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -384,7 +384,7 @@ Page({
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/本地存储.png" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/本地存储.png" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -527,7 +527,7 @@ Page({
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/路由与通信.png" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/路由与通信.png" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -640,7 +640,7 @@ Page({
 
 
 
-​              <img src="C:\Users\15778\Desktop\01-小程序课程笔记\01-小程序基础\images\上拉加载更多.gif" style="zoom:70%;" />       <img src="http://8.131.91.46:6677/mina/base/上拉加载更多案例.gif" style="zoom:80%;" />
+​              <img src="C:\Users\15778\Desktop\01-小程序课程笔记\01-小程序基础\images\上拉加载更多.gif" style="zoom:70%;" />       <img src="assets/上拉加载更多案例.gif" style="zoom:80%;" />
 
 
 
@@ -742,7 +742,7 @@ Page({
 
 
 
-​                  <img src="http://8.131.91.46:6677/mina/base/下拉刷新.gif" style="zoom:67%;" />      <img src="http://8.131.91.46:6677/mina/base/下拉刷新案例.gif" style="zoom:70%;" />     
+​                  <img src="assets/下拉刷新-1711467662784190.gif" style="zoom:67%;" />      <img src="assets/下拉刷新案例.gif" style="zoom:70%;" />     
 
 
 
@@ -846,7 +846,7 @@ enable-back-to-top：**让滚动条返回顶部**，iOS 点击顶部状态栏、
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/scroll-上拉加载更多.gif" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/scroll-上拉加载更多.gif" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
@@ -938,7 +938,7 @@ refresher-triggered：设置当前下拉刷新状态，(true 下拉刷新被触�
 
 
 
-<img src="http://8.131.91.46:6677/mina/base/scroll-下拉刷新.gif" style="zoom:80%; border: 1px solid #ccc" />
+<img src="assets/scroll-下拉刷新.gif" style="zoom:80%; border: 1px solid #ccc" />
 
 
 
