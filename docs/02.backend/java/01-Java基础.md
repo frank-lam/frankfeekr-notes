@@ -380,7 +380,7 @@ public class Box<T> {
 
 2. 类型通配符上限通过形如 List 来定义，如此定义就是通配符泛型值接受 Number 及其下层子类类型。  
 
-3. 类型通配符下限通过形如 List<? super Number> 来定义，表示类型只能接受 Number 及其三层父类类型，如 Objec 类型的实例。  
+3. 类型通配符下限通过形如 `List<? super Number>` 来定义，表示类型只能接受 Number 及其三层父类类型，如 Objec 类型的实例。  
 
 
 
