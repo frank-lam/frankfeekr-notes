@@ -103,6 +103,9 @@ c.json:
 {
     "c": "我是C"
 }
+```
+
+```js
 // 把ajax封装成模块
 import ajax from './ajax'
 
@@ -127,6 +130,8 @@ getData()
 注意
 
 await 只能在 async 标记的函数内部使用，单独使用会触发 Syntax error。
+
+
 
 ### 推荐阅读
 
