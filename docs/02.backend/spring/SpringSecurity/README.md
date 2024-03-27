@@ -107,21 +107,21 @@ public class HelloController {
 
 #### 2.2.1 SpringSecurity 完整流程
 
- SpringSecurity 的原理其实就是一个过滤器链，内部包含了提供各种功能的过滤器。这里我们可以看看入门案例中的过滤器。
+SpringSecurity 的原理其实就是一个过滤器链，内部包含了提供各种功能的过滤器。这里我们可以看看入门案例中的过滤器。
 
 ![img](assets/2909814-20220815171119043-1855237395.png)
 
 图中只展示了核心过滤器，其它的非核心过滤器并没有在图中展示。
 
-**UsernamePasswordAuthenticationFilter**:负责处理我们在登陆页面填写了用户名密码后的登陆请求。入门案例的认证工作主要有它负责。
+**UsernamePasswordAuthenticationFilter**：负责处理我们在登陆页面填写了用户名密码后的登陆请求。入门案例的认证工作主要有它负责。
 
-**ExceptionTranslationFilter：**处理过滤器链中抛出的任何AccessDeniedException和AuthenticationException 。
+**ExceptionTranslationFilter**：处理过滤器链中抛出的任何 AccessDeniedException 和 AuthenticationException 。
 
-**FilterSecurityInterceptor：**负责权限校验的过滤器。
+**FilterSecurityInterceptor**：负责权限校验的过滤器。
 
 
 
- 我们可以通过Debug查看当前系统中SpringSecurity过滤器链中有哪些过滤器及它们的顺序。
+我们可以通过 Debug 查看当前系统中 SpringSecurity 过滤器链中有哪些过滤器及它们的顺序。
 
 ![img](assets/2909814-20220815171219110-2115496418.png)
 
@@ -145,7 +145,7 @@ UserDetails接口：提供核心用户信息。通过UserDetailsService根据用
 
 #### 2.3.1 思路分析
 
-登录
+**登录：**
 
  ①自定义登录接口
 
@@ -157,7 +157,9 @@ UserDetails接口：提供核心用户信息。通过UserDetailsService根据用
 
  在这个实现类中去查询数据库
 
-校验：
+
+
+**校验：**
 
  ①定义Jwt认证过滤器
 
@@ -169,11 +171,11 @@ UserDetails接口：提供核心用户信息。通过UserDetailsService根据用
 
  存入SecurityContextHolder
 
+
+
 #### 2.3.2 准备工作
 
 ①添加依赖
-
-xml：
 
 ```xml
 <!--redis依赖-->
@@ -196,8 +198,6 @@ xml：
 ```
 
 ② 添加Redis相关配置
-
-java
 
 ```java
 import com.alibaba.fastjson.JSON;
@@ -264,7 +264,7 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T>
 }
 ```
 
-java
+
 
 ```java
 import org.springframework.context.annotation.Bean;
@@ -300,8 +300,6 @@ public class RedisConfig {
 ```
 
 ③ 响应类
-
-java
 
 ```java
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -367,8 +365,6 @@ public class ResponseResult<T> {
 ```
 
 ④工具类
-
-java
 
 ```java
 import io.jsonwebtoken.Claims;
@@ -484,7 +480,9 @@ public class JwtUtil {
 }
 ```
 
-java
+
+
+
 
 ```java
 import java.util.*;
