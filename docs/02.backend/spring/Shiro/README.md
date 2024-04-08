@@ -2,9 +2,9 @@
 
 ## 第一章 入门概述
 
-### 1.1 Shiro是什么
+### 1.1 Shiro 是什么
 
-​	Apache Shiro是一个功能强大且易于使用的Java安全(权限)框架。Shiro可以完成：认证、授权、加密、会话管理、与Web集成、缓存等。借助Shiro您可以快速轻松地保护任何应用程序——从最小的移动应用程序到最大的Web和企业应用程序。
+Apache Shiro 是一个功能强大且易于使用的 Java 安全(权限)框架。Shiro 可以完成：认证、授权、加密、会话管理、与 Web 集成、缓存等。借助 Shiro 您可以快速轻松地保护任何应用程序——从最小的移动应用程序到最大的 Web 和企业应用程序。
 
 ![](assets/1.png)
 
@@ -106,6 +106,8 @@ Shiro 架构
 
 （8）Cryptography：密码模块，Shiro提高了一些常见的加密组件用于如密码加密/解密。
 
+
+
 ## 第二章 基本使用
 
 ### 2.1 环境准备
@@ -150,19 +152,21 @@ lisi=l4
 
 ​	1> 身份验证：一般需要提供如身份ID等一些标识信息来表明登录者的身份，如提供 email，用户名/密码来证明。 
 
-​	2> 在shiro中，用户需要提供principals（身份）和credentials（证明）给shiro，从 而应用能验证用户身份： 
+​	2> 在shiro中，用户需要提供 principals（身份）和 credentials（证明）给 shiro，从而应用能验证用户身份： 
 
-​	3> principals：身份，即主体的标识属性，可以是任何属性，如用户名、邮箱等，唯一 即可。一个主体可以有多个principals，但只有一个Primary 	principals，一般是用户名/ 邮箱/手机号。 
+​	3> principals：身份，即主体的标识属性，可以是任何属性，如用户名、邮箱等，唯一 即可。一个主体可以有多个 principals，但只有一个 Primary  principals，一般是用户名/ 邮箱/手机号。 
 
-​	4> credentials：证明/凭证，即只有主体知道的安全值，如密码/数字证书等。 （5）最常见的principals和credentials组合就是用户名/密码
+​	4> credentials：证明/凭证，即只有主体知道的安全值，如密码/数字证书等。 
+
+（5）最常见的 principals 和 credentials 组合就是用户名/密码
 
 **2、登录认证基本流程** 
 
 （1）收集用户身份/凭证，即如用户名/密码
 
-（2）调用Subject.login进行登录，如果失败将得到相应的AuthenticationException异常，根据异常提示用户错误信息；否则登录成功
+（2）调用 Subject.login 进行登录，如果失败将得到相应的 AuthenticationException 异常，根据异常提示用户错误信息；否则登录成功
 
-（3）创建自定义的Realm类，继承org.apache.shiro.realm.AuthenticatingRealm类，实现doGetAuthenticationInfo()方法
+（3）创建自定义的 Realm 类，继承 org.apache.shiro.realm.AuthenticatingRealm 类，实现 doGetAuthenticationInfo() 方法
 
 ![](assets/6.png)
 
@@ -173,26 +177,26 @@ lisi=l4
 ```java
 public class ShiroRun {
 	public static void main(String[] args) {
- 		//1 初始化获取 SecurityManager
+ 		// 1 初始化获取 SecurityManager
 		IniSecurityManagerFactory factory = new IniSecurityManagerFactory("classpath:shiro.ini");
 		SecurityManager securityManager = factory.getInstance();
  		SecurityUtils.setSecurityManager(securityManager);
- 		//2 获取 Subject 对象
+ 		// 2 获取 Subject 对象
  		Subject subject = SecurityUtils.getSubject();
- 		//3 创建 token 对象，web 应用用户名密码从页面传递
+ 		// 3 创建 token 对象，web 应用用户名密码从页面传递
  		AuthenticationToken token = new UsernamePasswordToken("zhangsan","z3");
- 		//4 完成登录
+ 		// 4 完成登录
  		try {
  			subject.login(token);
  			System.out.println("登录成功");
- 		}catch (UnknownAccountException e) {
+ 		} catch (UnknownAccountException e) {
  			e.printStackTrace();
  			System.out.println("用户不存在");
- 		}catch (IncorrectCredentialsException e) {
+ 		} catch (IncorrectCredentialsException e) {
  			e.printStackTrace();
  			System.out.println("密码错误");
- 		}catch (AuthenticationException ae) {
- 			//unexpected condition? error?
+ 		} catch (AuthenticationException ae) {
+ 			// unexpected condition? error?
 		}
 	}
 }
@@ -200,15 +204,15 @@ public class ShiroRun {
 
 **4、身份认证流程** 
 
-（1）首先调用Subject.login(token)进行登录，其会自动委托给SecurityManager
+（1）首先调用 Subject.login(token) 进行登录，其会自动委托给 SecurityManager
 
-（2）SecurityManager负责真正的身份验证逻辑；它会委托给Authenticator进行身份验证；
+（2）SecurityManager 负责真正的身份验证逻辑；它会委托给 Authenticator 进行身份验证；
 
-（3）Authenticator才是真正的身份验证者，Shiro API中核心的身份认证入口点，此处可以自定义插入自己的实现；
+（3）Authenticator 才是真正的身份验证者，Shiro API 中核心的身份认证入口点，此处可以自定义插入自己的实现；
 
-（4）Authenticator可能会委托给相应的AuthenticationStrategy进行多Realm身份验证，默认ModularRealmAuthenticator会调用AuthenticationStrategy进行多Realm身份验证；
+（4）Authenticator 可能会委托给相应的 AuthenticationStrategy 进行多 Realm 身份验证，默认 ModularRealmAuthenticator 会调用 AuthenticationStrategy 进行多Realm身份验证；
 
-（5）Authenticator会把相应的token传入Realm，从Realm获取身份验证信息，如果没有返回/抛出异常表示身份验证失败了。此处可以配置多个Realm，将按照相应的顺序及策略进行访问。
+（5）Authenticator 会把相应的 token 传入 Realm，从 Realm 获取身份验证信息，如果没有返回/抛出异常表示身份验证失败了。此处可以配置多个 Realm，将按照相应的顺序及策略进行访问。
 
 ### 2.4 角色、授权
 
@@ -431,6 +435,7 @@ role1=user:insert,user:select
  		<artifactId>mybatis-plus-boot-starter</artifactId>
  		<version>3.0.5</version>
  	</dependency>
+    
  	<!--mysql-->
  	<dependency>
 		<groupId>mysql</groupId>
