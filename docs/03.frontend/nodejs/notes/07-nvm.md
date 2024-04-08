@@ -2,9 +2,11 @@
 
 ![07_nvm](./assets/7429f732c4b51c388b0b727c0be35807b066d9dd.jpg)
 
+
+
 ## 介绍
 
-nvm 全称 `Node Version Manager` 顾名思义它是用来管理 node 版本的工具，方便切换不同版本的 Node.js
+nvm 全称 Node Version Manager 顾名思义它是用来管理 node 版本的工具，方便切换不同版本的 Node.js
 
 ## 使用
 
