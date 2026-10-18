@@ -343,7 +343,7 @@ onNext x 0..N [onError | onComplete]
 但是在 JVM 上如何编写异步代码呢？Java 提供了两种异步编程方式：
 
 - **回调（Callbacks）** ：异步方法没有返回值，而是采用一个 callback 作为参数（lambda 或匿名类），当结果出来后回调这个 callback。常见的例子比如 Swings 的 EventListener。
-- **Futures** ：异步方法 **立即** 返回一个 Future<T>，该异步方法要返回结果的是 T 类型，通过 Future封装。这个结果并不是 _立刻_ 可以拿到，而是等实际处理结束才可用。比如， ExecutorService 执行 Callable<T> 任务时会返回 Future 对象。
+- **Futures** ：异步方法 **立即** 返回一个 Future&lt;T&gt;，该异步方法要返回结果的是 T 类型，通过 Future封装。这个结果并不是 _立刻_ 可以拿到，而是等实际处理结束才可用。比如， ExecutorService 执行 Callable&lt;T&gt; 任务时会返回 Future 对象。
 
 这些技术够用吗？并非对于每个用例都是如此，两种方式都有局限性。
 回调很难组合起来，因为很快就会导致代码难以理解和维护（即所谓的“回调地狱（callback hell）”）。

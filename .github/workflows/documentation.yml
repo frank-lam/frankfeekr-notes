@@ -1,24 +1,65 @@
-name: Deploy Github pages
+name: Deploy GitHub Pages
+
 on:
   push:
     branches:
       - master
+  # 支持在 Actions 页面手动触发部署
+  workflow_dispatch:
+
+# 部署 GitHub Pages 需要这些权限（不再需要个人 PAT）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只跑一个部署，新的 push 不打断正在进行的发布
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  build-and-deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
-      with:
-        persist-credentials: false
-    - name: Install and Build
-      run: |
-        npm install
-        npm run build 
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        # package.json 里锁了两个「浮动传递依赖」（Docusaurus 2 太老，最新的依赖会把它搞崩）：
+        #  - webpack 5.105.0：>=5.106.0 时 ProgressPlugin 会校验自身 options（被 webpackbar 覆盖）而
+        #    报 ValidationError；>=5.112.0 起 lib/ContextReplacementPlugin.js 被移到 lib/context/ 下，
+        #    而 @docusaurus/theme-classic 还在引用旧路径
+        #  - cheerio 1.0.0-rc.12：1.0.0 稳定版起 CJS 入口不再导出 default，
+        #    @easyops-cn/docusaurus-search-local@0.23.0 依赖该 default 导出
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

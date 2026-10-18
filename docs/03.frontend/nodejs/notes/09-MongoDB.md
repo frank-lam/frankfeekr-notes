@@ -36,7 +36,7 @@ Mongodb 中有三个重要概念需要掌握
 
 - 文档（document）   文档是数据库中的最小单位，类似于 JS 中的对象
 
-<img src="./assets/f9e871ef89956cc15ef0e89aa7ac8e7839da10d6.jpg" alt="09_mongodb" style="zoom: 67%;" />
+<img src="./assets/f9e871ef89956cc15ef0e89aa7ac8e7839da10d6.jpg" alt="09_mongodb" style={{zoom: '67%'}} />
 
 JSON 文件示例：
 ```json
@@ -207,7 +207,7 @@ JSON 文件示例：
    db.集合名.find(查询条件)
    ```
 
-   <span style="color:red">_id 是 mongodb 自动生成的唯一编号，用来唯一标识文档</span>
+   <span style={{color: 'red'}}>_id 是 mongodb 自动生成的唯一编号，用来唯一标识文档</span>
 
 3. 更新文档
 

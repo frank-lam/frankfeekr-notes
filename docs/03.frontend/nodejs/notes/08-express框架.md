@@ -52,7 +52,7 @@ npm i express
 
 ### 什么是路由
 
-> 官方定义： <span style="color:red">路由确定了应用程序如何响应客户端对特定端点的请求</span>
+> 官方定义： <span style={{color: 'red'}}>路由确定了应用程序如何响应客户端对特定端点的请求</span>
 
 ### 路由的使用
 
@@ -139,7 +139,7 @@ app.listen(3000, () => {
 
 ### 获取路由参数
 
-路由参数指的是 <span style="color:red">URL 路径中的参数（数据）</span>
+路由参数指的是 <span style={{color: 'red'}}>URL 路径中的参数（数据）</span>
 
 ```js
 app.get('/:id.html', (req, res) => {
@@ -250,7 +250,7 @@ app.use(function (request, response, next) {
 
 #### 定义路由中间件
 
-如果<span style="color:red">只需要对某一些路由进行功能封装</span>，则就需要路由中间件
+如果<span style={{color: 'red'}}>只需要对某一些路由进行功能封装</span>，则就需要路由中间件
 
 调用格式如下：
 
@@ -414,7 +414,7 @@ app.listen(3000,()=>{
 
 ### 什么是模板引擎
 
-模板引擎是分离 <span style="color:red">用户界面和业务数据</span> 的一种技术
+模板引擎是分离 <span style={{color: 'red'}}>用户界面和业务数据</span> 的一种技术
 
 ### 什么是 EJS
 

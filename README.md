@@ -26,6 +26,11 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
+推送到 `master` 分支后，由 GitHub Actions（`.github/workflows/documentation.yml`）自动构建并发布到
+GitHub Pages（自定义域名 <https://notes.frankfeekr.cn>），也可以在该 workflow 的 Actions 页面手动触发。
+
+也可以在本地手动发布（备选方式）：
+
 Using SSH:
 
 ```

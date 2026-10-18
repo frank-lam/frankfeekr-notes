@@ -79,5 +79,5 @@ console.log(buf_3.toString()); //=>hallo
 
 **注意:**
 
-> 1. 如果修改的数值超过 `255` ，则<span style="color:red">超过</span> `8` 位数据会被舍弃
-> 2. 一个 `utf-8` 的字符 <span style="color:red">一般</span> 占 3 个字节
+> 1. 如果修改的数值超过 `255` ，则<span style={{color: 'red'}}>超过</span> `8` 位数据会被舍弃
+> 2. 一个 `utf-8` 的字符 <span style={{color: 'red'}}>一般</span> 占 3 个字节

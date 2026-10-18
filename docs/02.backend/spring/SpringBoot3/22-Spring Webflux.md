@@ -207,7 +207,7 @@ Mono.defer(() -> {
 | @RequestHeader | 请求头； |
 | @CookieValue | 获取Cookie |
 | @RequestBody | 获取请求体，Post、文件上传 |
-| HttpEntity<B> | 封装后的请求对象 |
+| HttpEntity&lt;B&gt; | 封装后的请求对象 |
 | @RequestPart | 获取文件上传的数据 multipart/form-data. |
 | java.util.Map, org.springframework.ui.Model, and org.springframework.ui.ModelMap. | Map、Model、ModelMap |
 | @ModelAttribute |  |
@@ -231,7 +231,7 @@ sse和websocket区别：
 | Controller method return value | Description |
 | --- | --- |
 | @ResponseBody | 把响应数据写出去，如果是对象，可以自动转为json |
-| HttpEntity<B>, ResponseEntity<B> | ResponseEntity：支持快捷自定义响应内容 |
+| HttpEntity&lt;B&gt;, ResponseEntity&lt;B&gt; | ResponseEntity：支持快捷自定义响应内容 |
 | HttpHeaders | 没有响应内容，只有响应头 |
 | ErrorResponse | 快速构建错误响应 |
 | ProblemDetail | SpringBoot3； |
@@ -244,7 +244,7 @@ redirect: 重定向到一个地址
 | @ModelAttribute | 以前一样 |
 | Rendering | 新版的页面跳转API； 不能标注 @ResponseBody 注解 |
 | void | 仅代表响应完成信号 |
-| Flux<ServerSentEvent>, Observable<ServerSentEvent>, or other reactive type | 使用  text/event-stream 完成SSE效果 |
+| Flux&lt;ServerSentEvent&gt;, Observable&lt;ServerSentEvent&gt;, or other reactive type | 使用  text/event-stream 完成SSE效果 |
 | Other return values | 未在上述列表的其他返回值，都会当成给页面的数据； |
 
 

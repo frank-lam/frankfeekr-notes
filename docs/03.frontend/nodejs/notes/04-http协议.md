@@ -232,7 +232,7 @@ http://127.0.0.1:9000
 | URL 路径       | `require('url').parse(request.url).pathname`                                 | **\***   |
 | URL 查询字符串 | `require('url').parse(request.url,  true).query`                             | **\***   |
 | 请求头         | `request.headers`                                                            | **\***   |
-| 请求体         | `request.on('data', function(chunk){})`<br>`request.on('end', function(){})` |          |
+| 请求体         | `request.on('data', function(chunk){})`<br/>`request.on('end', function(){})` |          |
 
 ```js
 // 1. 导入 http 模块

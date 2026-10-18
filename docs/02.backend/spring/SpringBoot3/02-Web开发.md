@@ -1151,9 +1151,9 @@ public class ServletWebServerFactoryAutoConfiguration {
 | configurePathMatch                 | PathMatchConfigurer                   | **路径匹配**：自定义 URL 路径匹配。可以自动为所有路径加上指定前缀，比如 /api          | 无                                              |
 | configureAsyncSupport              | AsyncSupportConfigurer                | **异步支持**：                                                                        | TaskExecutionAutoConfiguration                  |
 | addCorsMappings                    | CorsRegistry                          | **跨域**：                                                                            | 无                                              |
-| addArgumentResolvers               | List<HandlerMethodArgumentResolver>   | **参数解析器**：                                                                      | mvc 默认提供                                    |
-| addReturnValueHandlers             | List<HandlerMethodReturnValueHandler> | **返回值解析器**：                                                                    | mvc 默认提供                                    |
-| configureHandlerExceptionResolvers | List<HandlerExceptionResolver>        | **异常处理器**：                                                                      | 默认 3 个                                       |
+| addArgumentResolvers               | List&lt;HandlerMethodArgumentResolver&gt;   | **参数解析器**：                                                                      | mvc 默认提供                                    |
+| addReturnValueHandlers             | List&lt;HandlerMethodReturnValueHandler&gt; | **返回值解析器**：                                                                    | mvc 默认提供                                    |
+| configureHandlerExceptionResolvers | List&lt;HandlerExceptionResolver&gt;        | **异常处理器**：                                                                      | 默认 3 个                                       |
 ExceptionHandlerExceptionResolver
 ResponseStatusExceptionResolver
 DefaultHandlerExceptionResolver |

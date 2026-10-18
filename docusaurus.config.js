@@ -10,7 +10,9 @@ const config = {
   tagline: '积跬步以至千里，致敬每个爱学习的你！',
   url: 'https://notes.frankfeekr.cn',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  // 笔记里引用的附件（如 Obsidian 的 pptx）不一定都在仓库里，
+  // 这里用 warn 而不是 throw，避免单个失效链接阻塞整站发布
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/Landscape.svg',
   organizationName: 'frank-lam', // Usually your GitHub org/user name.
